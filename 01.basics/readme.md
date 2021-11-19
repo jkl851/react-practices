@@ -1,6 +1,10 @@
 React Practices - Basics
 
-ex00: create-react-app(cra) 으로 어플리케이션 빨리 만들어 보기
+ex00.cra: create-react-app(cra) 으로 어플리케이션 빨리 만들어 보기
+
+- npm install -g create-react-app
+- npx create-react-app ex00.cra
+
 ex01: 전통적인 DOM API 기반의 어플리케이션
 ex02: 어플리케이션 1
 ex03: 어플리케이션 2 - ES6 모듈 시스템
