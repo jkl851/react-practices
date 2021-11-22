@@ -1,0 +1,19 @@
+{
+  "name": "ex01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dev-server.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack ./src/index.js -o ./public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.9.1"
+  }
+}
