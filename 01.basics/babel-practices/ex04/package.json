@@ -1,7 +1,7 @@
 {
-  "name": "ex02",
+  "name": "ex04",
   "version": "1.0.0",
-  "description": "",
+  "description": "Env Preset",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.0"
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4"
   }
 }
