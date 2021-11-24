@@ -1,8 +1,12 @@
 const path = require('path');
 const loader = require('sass-loader');
-module.exports = {
+
+module.exports = (env) => {
+    const entry = path.resolve(`src/${env.src}/index.js`);
+
+    return {
     mode: 'development',
-    entry: path.resolve('src/${env.src}/index.js'), // 엔트리 파일 목록
+    entry: entry, // 엔트리 파일 목록
     output: {
         path: path.resolve('public'), // 번들 파일 폴더
         filename: 'bundle.js', //  '[name].bundle.js' 번들 파일 이름 규칙
@@ -30,4 +34,4 @@ module.exports = {
         compress: true,
         historyApiFallback: true
     }
-}
+}};
