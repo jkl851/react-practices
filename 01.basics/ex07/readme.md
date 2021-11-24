@@ -1,4 +1,4 @@
-ex06: React(JSX 기반) 어플리케이션으로 리팩토링
+ex07: CRA로 만든 Application을 직접 설정해서 만들어 보기
 
 설치 :
 $ npm i -D webpack webpack-cli babel-loader webpack-dev-server style-loader css-loader sass-loader node-sass @babel/core @babel/cli @babel/preset-env @babel/preset-react

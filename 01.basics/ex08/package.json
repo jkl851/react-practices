@@ -1,17 +1,20 @@
 {
-  "name": "ex05",
+  "name": "ex08",
   "version": "1.0.0",
-  "description": "ex05: React(API 기반) 어플리케이션으로 리팩토링",
+  "description": "ex08: JSX Tutorials",
   "main": "index.js",
   "scripts": {
-    "start": "npx webpack serve --progress",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack"
+    "debug": "npx webpack serve --progress --mode development --env"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "node-sass": "^6.0.1",
     "sass-loader": "^12.3.0",
