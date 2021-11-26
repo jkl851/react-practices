@@ -28,19 +28,19 @@ export default function MyComponent({props01, props02, props03, props04, props05
             <span>props07: { props07 ? props07 : '--- Not Set ---' }</span>
             <br/>
 
-            <span>props08: { props08 ? props08.map((e, i) => e ? <b key={i}>{'true'}</b> : <b key={i}>{'false'}</b> ) : '--- Not Set ---' }</span>
+            <span>props08: { props08 ? props08.map((e, i) => e ? <b key={i}>{'true'}</b> : <b key={i}>{'false'}</b>) : '--- Not Set ---' }</span>
             <br/>
 
             <span>
                 props09: { 
-                    props09 ? 
+                    props09 ?  
                         <div>
                             <h3>{props09.no}</h3>
                             <h4>{props09.name}</h4>
                             <h5>{props09.email}</h5>
-                        </div> :                         
-                        '--- Not Set ---' 
-                }
+                        </div> :
+                        '--- Not Set ---'
+                    }
             </span>
             <br/>
 
@@ -58,7 +58,7 @@ MyComponent.propTypes = {
     props05: PropTypes.array.isRequired,
     props06: PropTypes.func.isRequired,
 
-    // Built-In PropTypes Validator(Combined Primitive)
+    // Built-In PropTypes Validator(Combined primitive)
     props07: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     props08: PropTypes.arrayOf(PropTypes.bool).isRequired,
     props09: PropTypes.shape({
