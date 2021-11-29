@@ -1,6 +1,7 @@
 import React from "react";
-import cards from './data.json';
-import './assets/styles.css';
+import CardList from "./CardList";
+import cards from './assets/json/data.json';
+import './assets/css/styles.css';
 
 export default function() {
 
