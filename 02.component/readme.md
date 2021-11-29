@@ -3,11 +3,11 @@ React Practices - Component
 1. ex01: Property
    1.1 Component 작성법
    1.2 data flow : top -> down
-   1.3 Kanbanboard - ex01
+   1.3 Kanbanboard - 01
 
 2. ex02
    2.1 Component Styling
-   2.2 Kanbanboard - ex02
+   2.2 Kanbanboard - 02
 
 3. ex03
    3.1 React Event
