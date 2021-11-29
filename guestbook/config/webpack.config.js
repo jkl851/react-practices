@@ -2,7 +2,7 @@ const path = require('path');
 const loader = require('sass-loader');
 
 module.exports = (env) => {
-    const entry = path.resolve(`src/${env.src}/index.js`);
+    const entry = path.resolve(`src/index.js`);
 
     return {
     mode: 'development',
@@ -24,7 +24,7 @@ module.exports = (env) => {
             test: /\.(sa|sc|c)ss$/i, //   .(sa나 sc나 s)ss(공통) 로 끝나는($) 모든 파일
             use: [
                 'style-loader',
-                { loader: 'css-loader', options: { modules: true } }, 
+                { loader: 'css-loader', options: { modules: false } }, 
                 'sass-loader'
             ]
         }, {

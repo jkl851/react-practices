@@ -22,7 +22,11 @@ module.exports = (env) => {
             }
         }, {
             test: /\.(sa|sc|c)ss$/i, //   .(sa나 sc나 s)ss(공통) 로 끝나는($) 모든 파일
-            use: ['style-loader', 'css-loader', 'sass-loader']
+            use: [
+                'style-loader',
+                { loader: 'css-loader', options: { modules: env['css-modules'] !== 'false' } }, 
+                'sass-loader'
+            ]
         }, {
             test: /\.(png|gif|jpe?g|svg|ico|tiff?|bmp)$/i, //jpe?g   e가 있어도 되고, 없어도 되는 정규표현식
             type: 'asset/resource'
