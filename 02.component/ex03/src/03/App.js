@@ -1,39 +1,80 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useRef} from 'react';
+import logo from '../assets/images/react-logo.png';
 
 export default function App() {
+    const imageRef = useRef(null);
 
-    const onChangeMessageInput = function(event) {
-        console.log(event.target.name, ':', event.target.value);
+    const onKeyPressInput = (e) => {
+        if(e.key == 'Enter') {
+            console.log(e.target.value);
+        }
+    };
+
+    const onFocusInput = (e) => {
+        console.log('focused');
     }
 
-    const onAddFormSubmit = function(event) {
-        event.preventDefault();
-        console.log(event.target.name, ':', 'Ajax로 등록할 겁니다.');
+    const onBlurInput = (e) => {
+        console.log('blur');
     }
+
+    const onMouseOverImage = (e) => {
+        console.log('mouseover', `x=${e.clientX}, y=${e.clientY}`);
+    }
+
+    const onMouseMoveImage = (e) => {
+        const offsetTop = imageRef.current.offsetTop;
+        const offsetLeft = imageRef.current.offsetLeft;
+        console.log('mousemove', `x=${e.clientX-offsetLeft}, y=${e.clientY-offsetTop}`);
+    }
+
+    const onMouseOutImage = (e) => {
+        console.log('mouseout', `x=${e.clientX}, y=${e.clientY}`);
+    }    
+
+    const onMouseDownImage = (e) => {
+        console.log('mousedown', `x=${e.clientX}, y=${e.clientY}`);
+    }    
+
+    const onMouseUpImage = (e) => {
+        console.log('mouseup', `x=${e.clientX}, y=${e.clientY}`);
+    }    
+
+    const onClickImage = (e) => {
+        console.log('clik', `x=${e.clientX}, y=${e.clientY}`);
+    }    
+
+    const onDoubleClickImage = (e) => {
+        console.log('dblclick', `x=${e.clientX}, y=${e.clientY}`);
+    }    
 
     return (
         <Fragment>
-            <h2>ex03 - SyntheticEvent</h2>
-            <p>
-                Native DOM Event 객체를 Wrapper 하고 있다.<br/>
-                Native 이벤트 객체와 사용하는 방식이 같다(인테페이스 동일)
-            </p>
-            <form
-                name='addForm'
-                method='post'
-                action='/do/not/go'
-                >
-                <input
-                    type='text'
-                    name='message'
-                    placeholder='메세지를 입력 하세요'
-                    />
+            <h2>ex03 - Some Examples of Event Handler</h2>
+            <input
+                type='text'
+                placeholder='메세지를 입력 하세요'
+                onKeyPress={ onKeyPressInput }
+                onFocus={ onFocusInput }
+                onBlur={ onBlurInput }/>
                 <br/>
                 <br/>
-                <input
-                    type='submit'
-                    value='등록' />
-            </form>
+            <img
+                ref={ imageRef }
+                style={ {
+                    cursor: 'pointer',
+                    width: 190,
+                    border: '1px solid #ccc'
+                } }
+                src={ logo }
+                onMouseOver={ onMouseOverImage }
+                onMouseMove={ onMouseMoveImage }
+                onMouseOut={ onMouseOutImage }
+                onMouseDown={ onMouseDownImage }
+                onMouseUp={ onMouseUpImage }
+                onClick={ onClickImage }
+                onDoubleClick={ onDoubleClickImage }
+                />
         </Fragment>
     );
 }
