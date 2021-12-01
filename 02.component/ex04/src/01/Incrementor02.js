@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 
 export default function ({ begin, step }) {
     const [stateVal, setVal] = useState(begin);
-    const [stateStep] = useState(step);
+
 
     return (
         <div>
             <button onClick={(e) => {
-                setVal(stateVal + stateStep);
+                setVal(stateVal + step);
             }}>
                 <strong>+</strong>
             </button>
