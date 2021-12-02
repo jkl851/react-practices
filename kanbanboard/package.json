@@ -1,10 +1,10 @@
 {
   "name": "kanbanboard",
   "version": "1.0.0",
-  "description": "ex08: JSX Tutorials",
+  "description": "kanbanboard",
   "main": "index.js",
   "scripts": {
-    "debug": "npx webpack serve --config config/webpack.config.js --progress --mode development --env"
+    "debug": "npx webpack serve --config config/webpack.config.js --progress --mode development"
   },
   "keywords": [],
   "author": "",
