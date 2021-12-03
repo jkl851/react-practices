@@ -1,11 +1,9 @@
-
 import React from 'react';
 import Guestbook from './Guestbook';
+import './assets/scss/App.scss';
 
-export default function() {
+export default function App() {
     return (
-        <div id='App'>
-          <Guestbook />
-        </div>
-    )
+        <Guestbook/>
+    );
 }
