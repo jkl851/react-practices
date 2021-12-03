@@ -1,4 +1,4 @@
-import React, {Fragment, useState, useRef} from 'react';
+import React, {Fragment, useState, useRef, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
 import Message from './Message';
@@ -10,6 +10,11 @@ Modal.setAppElement('body');
 export default function MessageList({messages, notifyMessage}) {
     const refForm = useRef(null);
     const [modalData, setModalData] = useState({isOpen: false});
+    useEffect(() => {
+        setTimeout(() => {
+        refForm.current && refForm.current.password.focus();
+        }, 100);
+    }, [modalData]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -34,11 +39,11 @@ export default function MessageList({messages, notifyMessage}) {
 
             // 비밀번호가 틀린 경우
             // jsonResult.data = null
-            // setModalData(Object.assign({}, modalData, {label: '비밀번호가 일치하지 않습니다.', password: ''}));
+            setModalData(Object.assign({}, modalData, {label: '비밀번호가 일치하지 않습니다.', password: ''}));
             // 잘 삭제된 경우
             // jsonResult.data = 10
-            setModalData({isOpen: false, password:''});
-            notifyMessage.delete(modalData.messageNo);
+            // setModalData({isOpen: false, password:''});
+            // notifyMessage.delete(modalData.messageNo);
         } catch(err) {
             console.error(err);
         }
