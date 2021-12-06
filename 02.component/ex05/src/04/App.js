@@ -30,7 +30,7 @@ export default function App() {
     //     console.log('setTimeout called');
     //     setTimeout(function () {
     //         setCurrentClockTime(getCurrentClockTime());
-    //         setTicks(ticks+1);
+    //         setTicks(ticks+1); 
     //     }, 1000);
     // }, [currentClockTime]);
 
