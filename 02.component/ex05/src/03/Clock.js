@@ -36,6 +36,6 @@ export default class Clock extends Component {
     }
 
     componentWillUnmount() {
-        console.log('Clock', 'componentWillUnmount');
+        console.log('Clock' , 'componentWillUnmount');
     }
 }
