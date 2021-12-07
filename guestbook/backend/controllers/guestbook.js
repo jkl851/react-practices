@@ -25,18 +25,16 @@ module.exports = {
                 order: [
                     ['no', 'desc']
                 ],
-                limit: 3
+                limit: 5
             });
-
-            setTimeout(() => {
-                res
-                    .status(200)
-                    .send({
-                        result: 'success',
-                        data: results,
-                        message: null
-                    });
-            }, 1000);
+            
+            res
+                .status(200)
+                .send({
+                    result: 'success',
+                    data: results,
+                    message: null
+                });
         } catch (err) {
             next(err);
         }
