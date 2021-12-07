@@ -19,7 +19,7 @@ export default function() {
         const response = await fetch('http://localhost:8888/api', {
           method: 'get',
           mode: 'cors',                           // no-cors, cors, same-origin*
-          credentials: 'same-origin',             // include, omit, same-origin*
+          credentials: 'include',                 // include, omit, same-origin*
           cache: 'no-cache',                      // no-cache, reload, force-cache, default*      
           headers: {
             'Content-Type': 'application/json',   // cf. application/x-www-form-urlencoded
