@@ -5,6 +5,7 @@ import Main from "./component/Main";
 import Gallery from "./component/Gallery";
 import Guestbook from "./component/Guestbook";
 import About from "./component/About";
+import Error404 from "./component/error/Error404";
 
 
 import './assets/scss/App.scss'
@@ -17,6 +18,7 @@ export default function App() {
                 <Route path='gallery' element={<Gallery />}/>
                 <Route path='guestbook' element={<Guestbook />}/>
                 <Route path='about' element={<About />}/>
+                <Route path='*' element={<Error404 />}/>
             </Routes>
         </Router>
     );
